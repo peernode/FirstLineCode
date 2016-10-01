@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -42,6 +43,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
     public void onClick(View v){
         switch(v.getId()){
             case R.id.change_text:
+                Log.d("button", "changeText");
                 new Thread(new Runnable() {
                     @Override
                     public void run() {
